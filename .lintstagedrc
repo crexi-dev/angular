@@ -1,0 +1,7 @@
+{
+    "*.ts": "eslint --quiet --fix",
+    "*.json": "eslint --quiet --fix",
+    "*.scss": "stylelint --fix --allow-empty-input --max-warnings 0",
+    "!(**/*.html)": "prettier --write --ignore-unknown",
+    "*.html": "prettier --write --ignore-unknown"
+}

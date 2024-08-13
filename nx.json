@@ -61,6 +61,7 @@
   "generators": {
     "@nx/angular:application": {
       "e2eTestRunner": "playwright",
+      "prefix": "crx",
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "jest"
