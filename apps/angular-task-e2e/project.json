@@ -1,0 +1,9 @@
+{
+  "name": "angular-task-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/angular-task-e2e/src",
+  "implicitDependencies": ["angular-task"],
+  "// targets": "to see all targets run: nx show project angular-task-e2e --web",
+  "targets": {}
+}
