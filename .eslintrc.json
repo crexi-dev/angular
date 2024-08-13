@@ -1,10 +1,19 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx", "@stylistic"],
+  "plugins": ["@nx", "@stylistic/ts"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "files": ["*.html"],
+      "extends": ["plugin:@nx/angular-template"],
+      "rules": {
+        "@angular-eslint/template/prefer-control-flow": ["error"],
+        "@angular-eslint/template/prefer-self-closing-tags": ["error"]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript", "plugin:@nx/angular"],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -32,18 +41,7 @@
             "depConstraints": [
               {
                 "sourceTag": "type:feature",
-                "onlyDependOnLibsWithTags": [
-                  "type:data-access",
-                  "type:feature",
-                  "type:ui",
-                  "type:util"
-                ]
-              },
-              {
-                "sourceTag": "type:util",
-                "onlyDependOnLibsWithTags": [
-                  "type:util"
-                ]
+                "onlyDependOnLibsWithTags": ["type:data-access", "type:feature", "type:ui", "type:util"]
               },
               {
                 "sourceTag": "type:data-access",
@@ -51,16 +49,16 @@
               },
               {
                 "sourceTag": "type:ui",
-                "onlyDependOnLibsWithTags": [
-                  "type:ui",
-                  "type:util"
-                ]
+                "onlyDependOnLibsWithTags": ["type:ui", "type:util"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
               }
             ]
           }
         ],
         "@stylistic/ts/brace-style": ["error"],
-        "@stylistic/ts/comma-dangle": ["error"],
         "@stylistic/ts/func-call-spacing": ["error"],
         "@stylistic/ts/indent": [
           "error",
@@ -171,17 +169,8 @@
             "maxBOF": 0
           }
         ],
-        "no-restricted-globals": [
-          "error",
-          "document",
-          "window",
-          "localStorage",
-          "sessionStorage"
-        ],
-        "no-restricted-syntax": [
-          "error",
-          "PropertyDefinition[definite = true]"
-        ],
+        "no-restricted-globals": ["error", "document", "window", "localStorage", "sessionStorage"],
+        "no-restricted-syntax": ["error", "PropertyDefinition[definite = true]"],
         "no-trailing-spaces": [
           "error",
           {
@@ -196,32 +185,11 @@
         "prefer-arrow-callback": ["error"],
         "prefer-const": ["error"],
         "quote-props": ["error", "as-needed"],
-        "sort-keys": [
-          "error",
-          "asc",
-          {
-            "caseSensitive": false,
-            "natural": true
-          }
-        ],
         "space-in-parens": ["error"],
         "spaced-comment": ["error"],
         "@typescript-eslint/no-extra-semi": "error",
         "no-extra-semi": "off"
       }
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@nx/angular-template"],
-      "rules": {
-        "@angular-eslint/template/prefer-control-flow": ["error"],
-        "@angular-eslint/template/prefer-self-closing-tags": ["error"]
-      }
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
-      "rules": {}
     },
     {
       "files": ["*.js", "*.jsx"],
