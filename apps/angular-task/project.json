@@ -32,7 +32,7 @@
         ],
         "scripts": [],
         "server": "apps/angular-task/src/main.server.ts",
-        "prerender": true,
+        "prerender": false,
         "ssr": {
           "entry": "apps/angular-task/server.ts"
         }
