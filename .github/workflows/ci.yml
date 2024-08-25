@@ -13,7 +13,7 @@ permissions:
     contents: read
 
 jobs:
-    main:
+    ci:
         runs-on: ubuntu-latest
         if: github.event.pull_request.draft == false
         steps:
