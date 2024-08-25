@@ -4,3 +4,8 @@
 /.nx/cache
 /.nx/workspace-data
 .angular
+
+package-lock.json
+package.json
+*.css
+*.ts
