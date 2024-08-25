@@ -13,7 +13,7 @@ The goal of this assignment is to showcase your skills and coding style while bu
 ## Getting Started
 
 > [!CAUTION] DO NOT FORK THIS REPO
-> Instead click the [Download Zip](https://github.com/crexi-dev/angular-task/archive/refs/heads/main.zip).
+> Instead click the [Download Zip](https://github.com/crexi-dev/angular/archive/refs/heads/main.zip).
 
 * Install packages with `npm i`
 * Serve the application using `npx nx run angular-task:serve`
