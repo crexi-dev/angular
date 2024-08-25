@@ -2,16 +2,20 @@ name: CI
 
 on:
     pull_request:
-        branches:
-            - main
+        types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    cancel-in-progress: true
 
 permissions:
     actions: read
     contents: read
 
 jobs:
-    main:
+    ci:
         runs-on: ubuntu-latest
+        if: github.event.pull_request.draft == false
         steps:
             - uses: actions/checkout@v4
               with:
