@@ -41,13 +41,13 @@ export class UserService {
     users = firstValueFrom(this.httpClient.get<User[]>(this.baseUrl));
 
     // GET https://jsonplaceholder.typicode.com/users/:id
-    user$ (id: number) {
+    getUser$ (id: number) {
 
         return this.httpClient.get<User>(`${this.baseUrl}/${id}`);
 
     }
 
-    user (id: number) {
+    getUser (id: number) {
 
         return firstValueFrom(this.httpClient.get<User>(`${this.baseUrl}/${id}`));
 
