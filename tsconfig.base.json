@@ -14,12 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@angular-task/user/data-access": ["libs/user/data-access/src/index.ts"],
-      "@angular-task/user/feature": ["libs/user/feature/src/index.ts"],
-      "@angular-task/user/ui": ["libs/user/ui/src/index.ts"],
-      "@angular-task/user/util": ["libs/user/util/src/index.ts"]
-    }
+    "paths": {}
   },
   "exclude": ["node_modules", "tmp"]
 }
