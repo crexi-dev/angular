@@ -2,7 +2,9 @@
   "name": "@angular-task/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "lint-staged": {
     "*.{ts,scss,html}": [
       "eslint --fix"
