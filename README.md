@@ -6,6 +6,7 @@ The goal of this assignment is to showcase your skills and coding style while bu
 
 > [!TIP] 
 > **State Management** - We have included all of the `@ngrx` packages but you're welcome to use any state management library you see fit or just stateful services.
+> 
 > **Component Library** - We have included [@angular/material](https://material.angular.io/components/categories) but you're welcome to use any component library that suites your needs. Ex: [PrimeNG](https://primeng.org/installation)
 
 ## Getting Started
